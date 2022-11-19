@@ -1,0 +1,9 @@
+PROBLEM mechanical
+READ_MESH my-mesh.msh
+
+E = 100e3		# comment in a line with code
+nu = 0.3
+
+# comment line
+
+BC bottom u = 0

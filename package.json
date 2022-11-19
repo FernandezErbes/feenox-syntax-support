@@ -1,0 +1,54 @@
+{
+	"name": "feenox-syntax-support",
+	"displayName": "FeenoX Syntax Support",
+	"description": "Syntax support for FeenoX scripts",
+	"author": "Federico Fernández Erbes",
+	"license": "MIT",
+	"publisher": "fernandez-erbes",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FernandezErbes/feenox-syntax-support"
+	},
+	"categories": [],
+	"keywords": [
+		"multi-root ready"
+	],
+	"engines": {
+		"vscode": "^1.63.0"
+	},
+	"activationEvents": [
+		"onLanguage:feenox"
+	],
+	"main": "./client/out/extension",
+	"contributes": {
+    "languages": [{
+      "id": "feenox",
+      "aliases": ["FeenoX", "feenox"],
+      "extensions": [".fee"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "feenox",
+      "scopeName": "source.feenox",
+      "path": "./syntaxes/feenox.tmLanguage.json"
+    }]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+		"test": "sh ./scripts/e2e.sh"
+	},
+	"devDependencies": {
+		"@types/mocha": "^9.1.0",
+		"@types/node": "^16.11.7",
+		"@typescript-eslint/eslint-plugin": "^5.42.0",
+		"@typescript-eslint/parser": "^5.42.0",
+		"eslint": "^8.26.0",
+		"mocha": "^9.2.1",
+		"typescript": "^4.8.4"
+	}
+}

@@ -1,0 +1,7 @@
+PROBLEM mechanical
+READ_MESH my-mesh.msh
+
+E = 100e3
+nu = 0.3
+
+BC bottom u = 0
