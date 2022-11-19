@@ -58,7 +58,8 @@ async function testCompletion(
 	const INDEX_NOT_FOUND = -1;
 	actualCompletionList.items.forEach(actualItem => {
 		const index = expectedCompletionList.items.findIndex(expectedItem => {
-			return expectedItem.label === actualItem.label;
+			return (expectedItem.label === actualItem.label &&
+				expectedItem.kind === actualItem.kind);
 		});
 
 		assert.ok(index !== INDEX_NOT_FOUND);
