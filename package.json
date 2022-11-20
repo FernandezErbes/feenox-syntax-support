@@ -2,6 +2,7 @@
 	"name": "feenox-syntax-support",
 	"displayName": "FeenoX Syntax Support",
 	"description": "Syntax support for FeenoX scripts",
+	"icon": "./logo.png",
 	"author": "Federico Fernández Erbes",
 	"license": "MIT",
 	"publisher": "FernandezErbes",
