@@ -2,7 +2,7 @@
 	"name": "feenox-syntax-support",
 	"displayName": "FeenoX Syntax Support",
 	"description": "Syntax support for FeenoX scripts",
-	"icon": "./logo.png",
+	"icon": "logo.png",
 	"author": "Federico Fernández Erbes",
 	"license": "MIT",
 	"publisher": "FernandezErbes",
@@ -51,6 +51,7 @@
 		"lint": "eslint ./client/src ./server/src --ext .ts,.tsx",
 		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
 		"test": "sh ./scripts/e2e.sh",
+		"package": "vsce package",
 		"deploy": "vsce publish"
 	},
 	"devDependencies": {
