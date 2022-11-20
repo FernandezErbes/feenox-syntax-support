@@ -52,7 +52,7 @@
 		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
 		"test": "sh ./scripts/e2e.sh",
 		"package": "vsce package",
-		"deploy": "vsce publish"
+		"deploy": "vsce publish --yarn"
 	},
 	"devDependencies": {
 		"@types/mocha": "^10.0.0",
