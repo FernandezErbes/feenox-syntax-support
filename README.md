@@ -3,7 +3,7 @@
 ## Description
 Syntax support for [FeenoX](https://www.seamplex.com/feenox/) scripts.
 
-![Demo](https://github.com/FernandezErbes/feenox-syntax-support/blob/master/demo.gif)
+![Demo](demo.gif)
 
 ## Features
 - Syntax highlighting
